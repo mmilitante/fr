@@ -1,0 +1,66 @@
+#!/usr/bin/perl
+
+use strict;
+
+use vars qw(
+	$command
+	$x
+	$max_browser_instance
+	$max_collector_instance
+	$max_acceptor_instance	
+);
+
+use constant CWD => '/home/mike/fr_malupit2';
+chdir(CWD);
+
+$max_browser_instance = shift(@ARGV);
+$max_collector_instance = shift(@ARGV);
+$max_acceptor_instance = shift(@ARGV);
+
+$command = "gnome-terminal ";
+
+for($x = 1; $x <= $max_browser_instance; $x++)
+{
+	#system("perl friendster-mobile-uid-browser.pl $x > /dev/null &");
+	system("bash uid-browser.sh $x > /dev/null &");
+	#$command .= " --tab --maximize --working-directory \"" . CWD . "\" -e \"perl friendster-mobile-uid-browser.pl\" -t \"browser$x\"";
+}
+
+for($x = 1; $x <= $max_collector_instance; $x++)
+{
+	#system("perl friendster-mobile-uid-collector.pl $x > /dev/null &");
+	#$command .= " --tab --maximize --working-directory \"" . CWD . "\" -e \"perl friendster-mobile-uid-collector.pl\" -t \"collector$x\"";
+}
+
+for($x = 1; $x <= $max_acceptor_instance; $x++)
+{
+	system("perl friendster-mobile-app-auto-install.pl $x > /dev/null &");
+	#$command .= " --tab --maximize --working-directory \"" . CWD . "\" -e \"perl friendster-mobile-app-auto-install.pl\" -t \"installer$x\"";
+}
+
+#system($command);
+
+
+=begin
+
+use constant MAX_BROWSER_INSTANCE => 1;
+use constant MAX_COLLECTOR_INSTANCE => 1;
+use constant MAX_ACCEPTOR_INSTANCE => 1;
+
+for($x = 1; $x <= MAX_BROWSER_INSTANCE; $x++)
+{
+	system("perl friendster-mobile-uid-browser.pl > /dev/null &");
+}
+
+for($x = 1; $x <= MAX_COLLECTOR_INSTANCE; $x++)
+{
+	system("perl friendster-mobile-uid-collector.pl > /dev/null &");
+}
+
+for($x = 1; $x <= MAX_ACCEPTOR_INSTANCE; $x++)
+{
+	system("perl friendster-mobile-app-auto-install.pl > /dev/null &");
+}
+
+cut
+

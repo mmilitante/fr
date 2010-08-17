@@ -1,0 +1,306 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xmlns:dict="dict"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title xmlns="">Friendster - Log In</title><meta name="description" content="Friendster is a leading global social network emphasizing genuine friendships and the discovery of new people through friends. Search for old friends and classmates, stay in better touch with friends, share photos and videos, and so much more!"><script xmlns="" type="text/javascript">
+        var FRIENDSTER = {}; //our new global
+        FRIENDSTER.components = {}; 
+    
+        window.name="friendster";
+    
+        
+            function loginf() {
+              if (document.login_form.email.value != '') {
+                if (document.login_form.password.value != "") {
+                  document.login_form.password.select();
+                }
+                document.login_form.password.focus();
+              } else {
+                document.login_form.email.focus();
+              }
+            }
+        
+    
+        var pageViewerID = "";
+        var pageOwnerID = "";
+        var pageViewerFName = "";
+        var pageOwnerFName = "";
+        var userHasBlog = '';
+        var trackingName = 'login';	
+        var pageViewerLangPref = 'en-US';
+        var blindedID = 'TMF68rvBoREJBmdjBGrRrRyAa_zMqVpPhim1Xa1xKw0*';
+        var pageViewerCountry = 'US';	
+        var profileIsSponsored = false;
+        var widgetsURL = 'http://widgets.friendster.com';
+        var profileURL = 'http://profiles.friendster.com';
+        var imagesURL = 'http://images.friendster.com/images';		
+    </script><link rel="shortcut icon" href="http://images.friendster.com/images/v2/friendster.ico"></link><link xmlns="" rel="stylesheet" type="text/css" media="screen, print" href="http://images.friendster.com/200911A-093/css/home.css">
+<link xmlns="" rel="stylesheet" type="text/css" media="screen, print" href="http://images.friendster.com/200911A-093/css/interior.css">
+<link xmlns="" rel="stylesheet" type="text/css" media="screen, print" href="http://images.friendster.com/200911A-093/css/globnav.css">
+<script xmlns="" type="text/javascript" src="http://images.friendster.com/images/lib/yui-260/build/yahoo-dom-event/yahoo-dom-event.js"></script><script xmlns="" type="text/javascript" src="http://images.friendster.com/images/lib/yui-260/build/connection/connection-min.js"></script><script xmlns="" type="text/javascript" src="http://images.friendster.com/images/lib/yui-260/build/animation/animation-min.js"></script><script xmlns="" type="text/javascript" src="http://images.friendster.com/images/lib/yui-260/build/json/json-min.js"></script><script xmlns="" type="text/javascript" src="http://images.friendster.com/images/lib/yui-260/build/datasource/datasource-min.js"></script><script xmlns="" type="text/javascript" src="http://images.friendster.com/images/lib/yui-260/build/autocomplete/autocomplete-min.js"></script><script xmlns="" type="text/javascript" src="http://images.friendster.com/200911A-093/js/common.js"></script><script xmlns="" type="text/javascript" src="http://images.friendster.com/200911A-093/js/fs_color_picker.js"></script><script xmlns="" type="text/javascript" src="http://images.friendster.com/200911A-093/js/fs_color_picker_ui.js"></script><script xmlns="" type="text/javascript" src="http://images.friendster.com/200911A-093/js/fs_pagelayout_ui.js"></script><script xmlns="" type="text/javascript" src="http://images.friendster.com/200911A-093/js/locale/en-US/strings.js"></script><script xmlns="" type="text/javascript" src="http://images.friendster.com/200911A-093/js/photos.js"></script><script xmlns="" type="text/javascript">
+		
+ 		function fgetCookie(e){var b=document.cookie.lastIndexOf(e+"=");if(b==-1){return null;}b=document.cookie.indexOf("=",b)+1;var a=document.cookie.indexOf(";",b);if(a==-1){a=document.cookie.length;}var d=unescape(document.cookie.substring(b,a));return d;}function fgetCookieValue(g,a){var f=fgetCookie(g);var b;if(f==null||a==null){return null;}var e=f.indexOf(a+"=");if(e==-1){return null;}e=f.indexOf("=",e)+1;if(f.indexOf("&",e)!=-1){b=f.indexOf("&",e);}else{if(f.indexOf(";",e)!=-1){b=f.indexOf(";",e);}else{b=f.length;}}var d=unescape(f.substring(e,b));return d;}function fsetCookie(c,d,f,a,g,e){if(a&&typeof a.toGMTString=="function"){a=a.toGMTString();}var b=c+"="+((d)?d+"=":"")+escape(unescape(f))+((a)?"; expires="+a:"")+((g)?"; path="+g:"")+((e)?"; domain="+e:"");document.cookie=b;return true;}function fsetCookieValue(a,i,h){var f=fgetCookie(a);var g=null;var e=0;var b=new Date();b.setTime(b.getTime()+1000*60*60*24*365);var j="";if(fgetCookieValue(a,i)&&f){var d=f.indexOf(i+"=")+i.length+1;if(f.indexOf("&",d)!=-1){e=f.indexOf("&",d);}else{if(f.indexOf(";",d)!=-1){e=f.indexOf(";",d);}else{e=f.length;}}g=f.substring(0,d)+unescape(h)+f.substring(e,f.length);fsetCookie(a,null,g,j,"/",getCookieDomain());}else{if(f&&i){g=f.substring(0,f.length)+"&"+i+"="+unescape(h);fsetCookie(a,null,g,j,"/",getCookieDomain());}else{fsetCookie(a,i,unescape(h),j,"/",getCookieDomain());}}}function funsetCookie(a){var b=new Date();b.setTime(b.getTime()-1);fsetCookie(a,null,"deleted",b,"/",getCookieDomain());}function fremoveCookieKeyValue(a,b){}var pageData={friends:{edit:["/friends.php","/friendrequests.php","/featuredfriends.php"],display:["/","/user.php","/friends.php"]},account:{edit:["/editaccount.php"],display:["/","/user.php"]},testimonials:{edit:["/comments.php"],display:["/","/user.php"]},photos:{edit:["/editphotos.php"],display:["/","/user.php"]},profile:{edit:["/editprofile.php"],display:["/","/user.php"]},messages:{edit:["/messages.php"],display:["/"]},customize:{edit:["/user.php?pskin=","/editskin.php"],display:["/user.php"]}};function refreshCachedPage(){if(thisUserAgent=="isSafari"||thisUserAgent=="isOther"){return;}if(refreshIfNotYours()){return;}refreshIfChanged();addToCacheList();}function noFriendsterAuth(){if(fgetCookie("friendster_anon")==null&&fgetCookieValue("friendster_auth_v2","uid")==null&&fgetCookieValue("friendster_profiles_auth","uid")==null&&fgetCookieValue("friendster_widgets_auth","uid")==null&&fgetCookieValue("friendster_groups_auth","uid")==null){return true;}else{return false;}}function refreshIfNotYours(){if(typeof(pageViewerID)!="undefined"&&((fgetCookie("friendster_anon")!=null&&pageViewerID!="")||(fgetCookieValue("friendster_auth_v2","uid")&&parseInt(fgetCookieValue("friendster_auth_v2","uid"))!=pageViewerID)||(noFriendsterAuth()&&pageViewerID!=""))){refreshPage();return true;}if((typeof(pageViewerLangPref)!="undefined")&&(fgetCookie("friendster_lang")!=null)&&(pageViewerLangPref!="")&&(fgetCookie("friendster_lang")!=pageViewerLangPref)){refreshPage();return true;}return false;}function addToCacheList(){var a=window.location.pathname;if(findDisplayPage(a)){var b=new Date();fsetCookieValue("friendster_cacheList",a,b.getTime());}}function refreshIfChanged(){var j=fgetCookie("friendster_update");var b=1000;if(!j){return null;}var d=window.location.pathname;var k=fgetCookieValue("friendster_cacheList",d);if(!k){return null;}var e=new Date();b=e.getTime()-k;b=Math.floor(b/1000);b=Math.floor(b/60);if(j&&j.indexOf(d)!=-1&&b<60){var l=j.split(",");var g=new String();var h=false;for(var f=0;f<l.length;f++){if(!(l[f].toString()==d.toString())){g+=l[f]+",";}else{h=true;}}if(g!=""){fsetCookieValue("friendster_update",null,g.substring(0,g.length-1));}else{funsetCookie("friendster_update");}if(h==true){refreshPage();}return true;}return null;}function pageUpdated(){var d=getDisplayPages(getPath());var e=fgetCookie("friendster_update");if(e){var a=e+","+d;var b=unique(a.split(","));fsetCookieValue("friendster_update",null,b.join(","));}else{fsetCookieValue("friendster_update",null,d);}}function getPath(){var a=window.location.pathname;return a;}function getDisplayPages(d){var c="";for(var a in pageData){if(pageData[a].edit.join(",").indexOf(d)!=-1){c+=pageData[a].display.join(",")+",";}}var b=unique(c.substring(0,c.length-1).split(","));return b.join(",");}function findDisplayPage(b){for(var a in pageData){if(pageData[a].display.join(",").indexOf(b)!=-1){return true;}}return false;}function unique(a){tmp=new Array(0);for(var b=0;b<a.length;b++){if(!contains(tmp,a[b])){tmp.length+=1;tmp[tmp.length-1]=a[b];}}return tmp;}function contains(b,d){for(var c=0;c<b.length;c++){if(b[c]==d){return true;}}return false;}function refreshPage(){var a=window.location.href;window.location.reload();}function getUserAgent(){var a=navigator.userAgent;if(a.indexOf("Safari")!=-1){return"isSafari";}else{if(a.indexOf("Firefox")!=-1){return"isFF";}else{if(a.indexOf("Opera")!=-1){return"isOpera";}else{if(a.indexOf("MSIE")!=-1){return"isIE";}else{return"isOther";}}}}}var thisUserAgent=getUserAgent();function getCookieDomain(){if(location.hostname.indexOf("friendster.com")!=-1){return"friendster.com";}else{return location.hostname;}}
+ 		
+		
+	
+		function onPageLoad()
+		{
+		  
+				loadGoogleAd();
+			displayAds('paidlink','sponsorsAd','','xsl/login.xsl',1);loginf();
+		}
+	</script><script xmlns="" type="text/javascript" src="http://partner.googleadservices.com/gampad/google_service.js"></script><script xmlns="" type="text/javascript">
+        var googleAdMgrAcctCode = "ca-pub-7664129725040290";
+        GS_googleAddAdSenseService(googleAdMgrAcctCode);
+        GS_googleEnableAllServices();
+      </script><script xmlns="" type="text/javascript">
+        GA_googleAddAttr("Lang", "en-US");
+        </script><script xmlns="" type="text/javascript">
+        GA_googleFetchAds();
+      </script></head><body class="yui-skin-sam" id="themeIDgreen"><script xmlns="" type="text/javascript">
+    var isEntity = false;
+    </script><div xmlns="" id="head"><div id="headContainer" class="clearfix">
+<div id="logoBox"><a id="logo" title="Friendster" href="http://www.friendster.com/"></a></div>
+<div id="secNav" class="clearfix"><ul>
+<li>
+<a target="_top" href="http://www.friendster.com/">Log In</a><b class="plug">|</b>
+</li>
+<li><a target="_top" href="http://www.friendster.com/">Join Friendster</a></li>
+</ul></div>
+<div id="srch" class="yui-skin-sam">
+<form action="http://www.friendster.com/search/user" method="get" name="navsearchform">
+<input type="text" value="" name="query" id="navSearchBox"><input type="hidden" value="user" name="stype" id="searchType"><input type="hidden" value="user" name="s" id="searchQuery"><input type="hidden" value="1" name="search"><a onclick="javascript:document.navsearchform.submit(); return false;" href="#" id="navSearchLink">Search</a>
+</form>
+<div id="searchResult"></div>
+</div>
+</div></div>
+<div id="wrap"><div id="content">
+
+ 
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+<div xmlns="" id="fcontent" class="p30_t"><div id="loginPage" class="fullPage">
+<div class="statusmessagebox"><div class="errorbox">
+<h2>Oops! </h2>
+<div class="boxcontent">Please enter your Email Address and Password.</div>
+</div></div>
+<div class="lc">
+<div id="LGTop"></div>
+<div id="LGMid"><div id="loginBoxPage">
+<div id="logboxtop"></div>
+<div id="login"><h1>Members</h1></div>
+<div id="logbox">
+<form name="login_form" method="post" action="/login.php">
+<input type="hidden" name="_submitted" value="1"><input type="hidden" name="next" value="/developer/widget_manage.php"><input type="hidden" name="tzoffset" value=""><script language="JavaScript">
+              var now = new Date();
+              document.login_form.tzoffset.value = now.getTimezoneOffset();
+            </script><label for="email">Email:</label><div id="LGemail"><input type="text" name="email" id="emailLG" maxlength="100" alt="Email Address"></div>
+<br><label for="password">Password:</label><div id="LGpassword"><input type="password" name="password" id="passwordLG" maxlength="10" onkeypress="submitLogin(event)"></div>
+<input type="checkbox" name="rememberme" id="rememberme"> <span class="font11">Keep me logged in <a href="javascript:void(0);" title="By checking this box, you'll stay logged in to Friendster until you log out or if you have not visited the site for one week.  You won't be asked to log in as frequently to give you easier access to all of your Friendster information, even if you close your browser or shut down your computer.  You should only choose this option when you are viewing the Friendster website from your own, private computer.  Do not check this box if you're using a public or shared computer to access Friendster.">Why?</a></span><div class="btn btnOrange" id="sbtJoin"><a href="#" onclick="document.login_form.submit(); return false;"><b>Log In</b></a></div>
+<input type="submit" style="display:none"><span class="medium font11" id="forgotPw">Forgot your password?<a href="/forgotpassword.php" class="font11"> Remind Me</a></span>
+</form>
+<div id="loginInfoText" style="display:none" class="smallLO">
+<b>Keep me logged in</b><br>By checking this box, you'll stay logged in to Friendster until you log out or if you have not visited the site for one week.  You won't be asked to log in as frequently to give you easier access to all of your Friendster information, even if you close your browser or shut down your computer.  You should only choose this option when you are viewing the Friendster website from your own, private computer.  Do not check this box if you're using a public or shared computer to access Friendster.</div>
+</div>
+<div id="logboxbtm"></div>
+<script>
+    function submitLogin(event) {
+        if (window.event) { //IE 
+            keynum = event.keyCode;
+        } else if (event.which) { // Mozilla/Opera
+            keynum = event.which;
+        }
+        if (keynum == 13) {
+            document.login_form.submit();
+        }
+    }
+    </script>
+</div></div>
+<div id="LGBot"></div>
+</div>
+<div class="rc"><div id="squareAd"></div></div>
+</div></div>
+
+        
+        <script xmlns="" type="text/javascript" src="http://images.friendster.com/200911A-093/js/footer.js"></script><div xmlns="" id="googleAdFactory" class="center fullwidth" style="visibility:hidden;display:none;margin:0 0 3px 0">
+<script type="text/javascript">
+     
+                      var placement=document.getElementById("googleAdPlacement");
+                      if (placement) {
+
+                       
+                      google_ad_client = "pub-7664129725040290"; // domestic
+                          
+                      google_ad_channel = "2881697457"; // domestic - all other pages
+                           google_alternate_ad_url = "http://images.friendster.com/images/remnant.html";
+                      google_ad_width = 300;
+                      google_ad_height = 250;
+                      google_ad_format = "300x250_as";
+                          
+                      google_ad_type = "text_image";
+                      google_color_border = "F4F4EB";
+                      google_color_bg = "ffffff";
+                      google_color_line = "F4F4EB";
+                      google_color_link = "0000FF";
+                      google_color_url = "339933";
+                      google_color_text = "000000";
+                      google_targeting = "site_content";
+                      google_encoding = "utf8";
+                      google_language = "en";
+                      
+                     var stratSelect = Math.floor(Math.random()*100);
+                     if (stratSelect < 50) {
+                             var keywordArray = new Array('broadbandphone,airlinescreditcard,videoconferencing,Cheapairlinetickets,southwestairfare,planetickets,airtickets,flighttickets,discountairline,discountstudentairlinetickets,vonage,skype,internetphonecall,webcalling,freeconferencecalling,broadbandphone,net2phone,voip,Eslcertificationonline,Esljob,Englishlesson,Englisheducation,distanceeducationonline,distanceeducationdegree','running,jogging,exercise,weightloss,dieting,nutrition,organic,body,vitamins,massage,spa,salon,yoga,workingout,pilates,Nike,Adidas,KSwiss,spinning,makeup,perfume,sneakers,clothes,shoes,style,fashion,jewelry,bath,beauty,hair,health,gym,shopping,mall,Hollywood,Juicy,spirituality,acne,skin','astrology,dating,chat,depression,intuition,lifechange,coaching,motivation,quitsmoking,relationshiphelp,selfdefense,social,anxiety,stressrelief,workplace,birthdaypartyidea,concertticket,dj,karaoke,music,limousine,bus,meetpeople,mixtapes,mobile,party,portablesoundsystem,restaurant,giftcertificate,textmessaging,theater,clubs,comedy,dance,raves,drinking,concerts,relationshipquiz,personalitytestquiz,speeddating,matchmaking,depressionsigns,lifecoach,relationshipbreakup,stressrelaxation,astrologyprediction,chatroom,emotionalstress','makemoneyathome,makingmoneyontheInternet,makeextramoney,earnmoney,moneymakingideas,universitydegreesonline,videoconferencing,college,contemporaryart,desktop,computer,gaming,internet,ipodaccessory,laptop,mp3players,newyorktimes,photography,theology,videogame,volunteerwork,desktopeducation,stock,laptop,university,business,investing,legaladvice,realestate,refinance,smallbusiness,marketing,stocktrading,volunteer,studentloans,money,investing,realestate,finance,computerprogramming,studies,learning,architecture,politics,advertising,teaching,school,wallstreet,fortune,forbes,entrepreneur','boxing,ticket,collegefootball,espn,magazine,extremesport,mlb,nascar,ncaa,gear,sportsillustrated,superbowl,throwback,jersey,worldcupsoccerseries,wwe,adventure,camping,equipment,cycling,hiking,kayaking,mountain,outdoorsports,sailing,scuba,diving,skateboard,snorkeling,snowboarding,wakeboard,watersports,whitewater,rafting,backpacking,vacation,mountainguide,canoe,shooting,hunting,fishing,waterskiing,horses,parks,backpacking,rockclimbing,skydiving','atari,dancerevolution,everquest,finalfantasy,gamecube,videogame,playstation,console,sonypsp,starwars,galaxies,rental,worldofwarcraft,xbox,chess,controller,antique,cooking,collectibleart,coincollecting,hobbysupply,modelairplane,carkit,pcgaming,photography,sport,stamp,toy,woodworking,ceramics,sewing,scrapbook,illustration,crafts,boardgames,adventure,cruise,travel,africansafari,airfare,australia,barcelona,beachrental,eurailpass,bicycletour,france,greece,hiking,italy,travel,trekking,movies,foreignfilms,indyfilms,acting,film,scifi','');
+                             var channelIds = new Array('Travel ','Health_Beauty ','Dating_Nightlife ','Professions','Sports_Outdoors ','Games_Hobbies ','Default');
+                     }
+     
+                     if (stratSelect > 50) {
+                             var keywordArray = new Array('flight-ticket,discount-plane-tickets,net2phone,web-phone,airfare-prices,student-air-fare,distance-education-online,trip,humor,travel-planner,learning-english,English-language-books,','Exercise-routine,loss,calorie-guide,healthy-skin,nutrition,boxing,self-defense,acne-skin,body-fat-scale,photographic-model,yoga,buy-vitamins,','astrology-match,dating,chat-depression,chat,rooms,life-coach-training,quit,relationship-trouble,advice,stress-reduction,teen-quiz,love-and-horoscope,depression-signs,','job,making-money-on-the-internet,distance-education-online,free-scholarship-searches,undergraduate,scholarship,volunteer,it-internship,401k,investment,changing-career,sports-colleges,invest,online-graduate-courses,national-grants,college-rankings,government,student,loan,college-recruiting,','Extreme-sports,fantasy-sports,sports-illustrated,outdoors,aqua,sports,bicycles,nitro-snowboard,,sports,nutrition,products,knee injury,hamstring injury','Fantasy-art,movie-star-photos,strange,weird,apple-ipod,dog-obedience-training,movie-listing,dvd-online,automatic-auction-bidding,raw,gourmet,Sirius radio,sci-fi,gamecube,playstation,sonly,psp-games,quizzes,','');
+                             var channelIds = new Array('Travel2','Health_Beauty2 ','Dating_Nightlife2 ','Professions2','Sports_Outdoors2 ','Games_Hobbies2 ','Default2');
+                     }
+     
+     
+                     var numKeywordsToCycle = 2;
+                     var bucketPercentages = new Array(0.1,0.15,0.1,0.25,0.15,0.1,0.15);
+     
+                     function getBucket(bucketPercentages){
+                             var cumulativePercentages = getCumulativePercentage(bucketPercentages);
+                             var randomNumber = Math.random();
+                             for(var i=cumulativePercentages.length-1; i>=0 ;i--){
+                                     if(randomNumber>cumulativePercentages[i])
+                                             return i+1;
+                             }
+                             return 0;
+                     }
+     
+                      function getCumulativePercentage(percentageArray){
+                             var sum=0;
+                             var cumulativePercentage = new Array();
+                             for(var i=0;i < percentageArray.length;i++){
+                                     sum += percentageArray[i];
+                                     cumulativePercentage.push(sum);
+                             }
+                             return cumulativePercentage;
+                      }
+     
+                      function trim(string){
+                        return string.replace(/^\s*|\s*$/g,'');
+                      }
+     
+                      function getKeywordSet(keywordArrayString, numKeywords){
+                             var keywordString = '';
+                             if(trim(keywordArrayString).length > 0){
+                                     var keywordArray = keywordArrayString.split(',');
+                                     var keywordSet= new Array();
+                                     var usedIndexes = new Array();
+                                     var index = 0;
+                                     for(var i=0;i < numKeywords; i++){
+                                             index = getIndexFromRandomNumber(keywordArray.length);
+                                             while(contains(usedIndexes, index)){
+                                                     index = getIndexFromRandomNumber(keywordArray.length);
+                                             }
+                                             keywordSet.push(keywordArray[index]);
+                                             usedIndexes.push(index);
+                                     }
+                                     return arrayToString(keywordSet);
+                             } else{
+                                     return trim(keywordArrayString);
+                             }
+                      }
+     
+                      function arrayToString(array){
+                             var string = '';
+                             for(var i=0;i < array.length;i++){
+                                     string += array[i] + " ";
+                             }
+                             return string;
+                      }
+     
+                      function contains(array, value){
+                             for(var i=0;i < array.length;i++){
+                                     if(array[i]==value)
+                                             return true;
+                             }
+                             return false;
+                      }
+     
+                      function getIndexFromRandomNumber(arrayLength){
+                             var index =  Math.floor(Math.random()*arrayLength);
+                             if(index == arrayLength)
+                                     index = index-1;
+                             return index;
+                      }
+
+                     var bucketIndex = getBucket(bucketPercentages);
+                     google_hints = getKeywordSet(keywordArray[bucketIndex], numKeywordsToCycle);
+                     google_ad_channel += ('+'+channelIds[bucketIndex]);
+                                     
+                     }
+                     </script><script type="text/javascript">var placement=document.getElementById("googleAdPlacement");
+                     if (placement) document.write("<sc"+"ript type=\"text/javascript\" src=\"http://pagead2.googlesyndication.com/pagead/show_ads.js\"></sc"+"ript>");</script><script type="text/javascript">
+     
+                             function loadGoogleAd() {
+                                     var placement=document.getElementById("googleAdPlacement");
+                                     var factory=document.getElementById("googleAdFactory");
+                                     if(placement && factory) {
+                                             var ad=factory.parentNode.removeChild(factory);
+                                             placement.appendChild(factory);
+                                             factory.style.visibility = "visible";
+                                             factory.style.display = "block";
+                                     }
+                             }
+                     </script>
+</div></div></div><div xmlns="" id="footer"><div id="footerWrapper">
+<a href="http://www.friendster.com/custhelp.php" target="_top">Help</a><span class="plug">|</span><span class="footerLangSelect">Language</span><script>
+        function switchLanguage(langType) {
+            var langType = document.getElementById('langSelecter')[document.getElementById('langSelecter').selectedIndex].value;
+            var rUrl = document.location.href;
+            url = 'http://www.friendster.com/setlang.php?lang='+langType+'&updatelang=1&next='+escape(rUrl);
+            document.location.href = url;
+        }
+    </script><select name="languagepref" id="langSelecter" onChange="switchLanguage()"><option value="" disabled>Please Select</option>
+<option value="en-US" title="" selected>English</option>
+<option value="zh-TW" title="Traditional Chinese">繁體中文</option>
+<option value="zh-CN" title="Simplified Chinese">简体中文</option>
+<option value="es-MX" title="Spanish">Español</option>
+<option value="ja-JP" title="Japanese">日本語</option>
+<option value="ko-KR" title="Korean">한국어</option>
+<option value="id-ID" title="Bahasa Indonesia">Bahasa</option>
+<option value="vi-VN" title="Vietnamese">Tiếng Việt</option>
+<option value="ms-MY" title="Bahasa Malaysia">Malay</option>
+<option value="th-TH" title="Thai">ภาษาไทย</option>
+<option value="tl-PH" title="Tagalog">Tagalog</option></select><a href="http://www.friendster.com/info/index.php" target="_top" class="footerSpace">About Us</a><span class="plug">|</span><a name="&amp;lid=advertise_footerLink" href="http://www.friendster.com/advertise/index.php" target="_top">Advertise</a><span class="plug">|</span><a href="http://blog.friendster.com/" target="_top">Blog</a><span class="plug">|</span><a href="http://www.olx.com/" target="_blank">Classifieds</a><span class="plug">|</span><a href="http://www.friendster.com/developer" target="_top">Developers</a><span class="plug">|</span><a href="http://www.friendster.com/info/presscenter.php" target="_top">Press Center</a><span class="plug">|</span><a href="http://www.friendster.com/info/privacy.php" target="_top">Privacy</a><span class="plug">|</span><a href="http://www.friendster.com/info/tos.php" target="_top">Terms</a><div class="pad_3">Copyright 2002-2009 Friendster, Inc.  All rights reserved. U.S. Patent No. 7,069,308, 7,117,254, 7,188,153, 7,451,161 &amp; 7,478,078<!--phpqcx39.gbxsc.friendster.com--></div>
+</div></div>
+<script xmlns="" type="text/javascript">
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script xmlns="" type="text/javascript">
+	var pageTracker = _gat._getTracker("UA-1826805-1");
+	pageTracker._setDomainName(".friendster.com");
+	pageTracker._setSampleRate("1");	
+	pageTracker._trackPageview(trackingName);
+	
+  
+    var pageTrackerAnon = _gat._getTracker("UA-3850677-1");
+	pageTrackerAnon._setDomainName(".friendster.com");
+	pageTrackerAnon._setSampleRate("1");	
+	pageTrackerAnon._trackPageview(trackingName);    
+  </script></body></html>
